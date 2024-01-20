@@ -13,11 +13,13 @@ export default {
       avatar: 'src/assets/images/chtholly.jpg',
       email: "180@qq.com",
       username: "aliancn",
+      password: "21331",
     })
     const init = ()=>{
       console.log("init main page");
+      // 如果本地有用户信息，就直接跳转到主页
+      // 否则跳转到登录页面
       if (localStorage.getItem("user") === null) {
-        // TODO: 这里应该是一个跳转到登录页面的操作
         router.push('/login/');
       } else {
         user.value = JSON.parse(localStorage.getItem("user"));

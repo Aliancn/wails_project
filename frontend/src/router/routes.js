@@ -4,7 +4,7 @@ import ChatView from "../views/ChatView.vue";
 import MainPage from "../views/MainPage.vue";
 
 const routes = [
-    { path: '/', component: Home ,
+    { path: '/', component: Home,
         children: [
             {
                 name: 'home',

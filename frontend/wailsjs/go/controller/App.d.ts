@@ -12,3 +12,5 @@ export function DeleteCountDown(arg1:number):Promise<utils.Resp>;
 export function GetCountDown():Promise<utils.Resp>;
 
 export function Greet(arg1:string):Promise<string>;
+
+export function Register(arg1:controller.User):Promise<utils.Resp>;

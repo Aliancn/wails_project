@@ -21,3 +21,7 @@ export function GetCountDown() {
 export function Greet(arg1) {
   return window['go']['controller']['App']['Greet'](arg1);
 }
+
+export function Register(arg1) {
+  return window['go']['controller']['App']['Register'](arg1);
+}

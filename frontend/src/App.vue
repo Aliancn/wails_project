@@ -2,9 +2,10 @@
 </script>
 
 <template>
-  <RouterView></RouterView>
+  <n-message-provider>
+    <RouterView></RouterView>
+  </n-message-provider>
 </template>
-
 <style>
 
 </style>

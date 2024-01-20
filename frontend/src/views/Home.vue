@@ -16,7 +16,7 @@ import MenuOptions from "../components/menuOptions.vue";
         </n-layout-header>
 
         <n-layout-content content-style="padding: 24px;">
-          <router-view></router-view>
+            <router-view></router-view>
         </n-layout-content>
 <!--        <n-layout-footer bordered>-->
 <!--          这里是页脚-->
