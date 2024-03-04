@@ -4,6 +4,7 @@ go 1.18
 
 require (
 	github.com/wailsapp/wails/v2 v2.6.0
+	gopkg.in/ini.v1 v1.67.0
 	gorm.io/driver/postgres v1.5.4
 	gorm.io/gorm v1.25.5
 )

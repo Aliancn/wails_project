@@ -72,6 +72,19 @@ const menuOptions = [
     key: "go-to-countDown",
     icon: renderIcon(CountDownIcon)
   },
+  {
+    label: () => h(
+        RouterLink,
+        {
+          to: {
+            path: "/todoList"
+          }
+        },
+        { default: () => "待办事项" },
+    ),
+    key: "go-to-todoList",
+    icon: renderIcon(CountDownIcon)
+  }
 ];
 
 export default defineComponent({

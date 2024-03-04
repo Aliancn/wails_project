@@ -10,12 +10,24 @@ export function CreateCountDown(arg1) {
   return window['go']['controller']['App']['CreateCountDown'](arg1);
 }
 
+export function CreateTodoList(arg1) {
+  return window['go']['controller']['App']['CreateTodoList'](arg1);
+}
+
 export function DeleteCountDown(arg1) {
   return window['go']['controller']['App']['DeleteCountDown'](arg1);
 }
 
+export function DeleteTodoList(arg1) {
+  return window['go']['controller']['App']['DeleteTodoList'](arg1);
+}
+
 export function GetCountDown() {
   return window['go']['controller']['App']['GetCountDown']();
+}
+
+export function GetTodoList() {
+  return window['go']['controller']['App']['GetTodoList']();
 }
 
 export function Greet(arg1) {
@@ -24,4 +36,8 @@ export function Greet(arg1) {
 
 export function Register(arg1) {
   return window['go']['controller']['App']['Register'](arg1);
+}
+
+export function UpdateTodoList(arg1) {
+  return window['go']['controller']['App']['UpdateTodoList'](arg1);
 }

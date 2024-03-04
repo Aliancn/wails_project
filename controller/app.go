@@ -3,6 +3,7 @@ package controller
 import (
 	"context"
 	"fmt"
+	"gopkg.in/ini.v1"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )
@@ -22,8 +23,24 @@ func NewApp() *App {
 func (a *App) Startup(ctx context.Context) {
 	a.ctx = ctx
 
+	var (
+		host, user, password, dbname, port string
+	)
+
+	// 读取ini配置文件
+	cfg, err := ini.Load("config/app.ini")
+	if err != nil {
+		println("Fail to read file: ", err)
+	}
+	section, err := cfg.GetSection("pgsql")
+	host = section.Key("host").String()
+	user = section.Key("user").String()
+	password = section.Key("password").String()
+	dbname = section.Key("dbname").String()
+	port = section.Key("port").String()
+
+	dsn := fmt.Sprintf("host=%s user=%s password=%s dbname=%s port=%s sslmode=disable TimeZone=Asia/Shanghai", host, user, password, dbname, port)
 	// 初始化数据库postgresql
-	dsn := "host=localhost user=aliancn password=20040416 dbname=demo port=5432 sslmode=disable TimeZone=Asia/Shanghai"
 	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {
 		panic("failed to connect database")

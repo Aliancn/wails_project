@@ -26,6 +26,11 @@ const routes = [
                 path :'countDown/',
                 component : () => import('../views/CountdownView.vue')
             },
+            {
+                name :'todolist',
+                path : 'todoList/',
+                component: ()=> import ('../views/TodoListView.vue')
+            }
 
         ]
     },

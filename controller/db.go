@@ -13,4 +13,5 @@ func InitDB(db *gorm.DB) {
 	// 自动迁移
 	db.AutoMigrate(&Dao.CountDownDao{})
 	db.AutoMigrate(&Dao.UserDao{})
+	db.AutoMigrate(&Dao.TodoListDao{})
 }

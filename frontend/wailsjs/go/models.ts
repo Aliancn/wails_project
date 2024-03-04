@@ -22,6 +22,22 @@ export namespace controller {
 	        this.id = source["id"];
 	    }
 	}
+	export class TodoList {
+	    id: number;
+	    taskName: string;
+	    competed: boolean;
+	
+	    static createFrom(source: any = {}) {
+	        return new TodoList(source);
+	    }
+	
+	    constructor(source: any = {}) {
+	        if ('string' === typeof source) source = JSON.parse(source);
+	        this.id = source["id"];
+	        this.taskName = source["taskName"];
+	        this.competed = source["competed"];
+	    }
+	}
 	export class User {
 	    username: string;
 	    password: string;

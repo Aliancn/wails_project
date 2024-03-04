@@ -7,10 +7,18 @@ export function CheckLogin(arg1:controller.User):Promise<utils.Resp>;
 
 export function CreateCountDown(arg1:controller.CountDown):Promise<utils.Resp>;
 
+export function CreateTodoList(arg1:controller.TodoList):Promise<utils.Resp>;
+
 export function DeleteCountDown(arg1:number):Promise<utils.Resp>;
 
+export function DeleteTodoList(arg1:controller.TodoList):Promise<utils.Resp>;
+
 export function GetCountDown():Promise<utils.Resp>;
+
+export function GetTodoList():Promise<utils.Resp>;
 
 export function Greet(arg1:string):Promise<string>;
 
 export function Register(arg1:controller.User):Promise<utils.Resp>;
+
+export function UpdateTodoList(arg1:controller.TodoList):Promise<utils.Resp>;
